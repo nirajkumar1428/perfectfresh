@@ -1,0 +1,49 @@
+/* CSS Document */
+
+.open_shop_banner {
+	height:610px; 
+}
+.open_shop_banner h1 {
+	max-width:850px; 
+	margin-top:100px;
+}
+.open_shop_banner .logo { 
+	margin-right:auto;
+	margin-top:150px;
+}
+.footerbottom .menu {
+	float:none; 
+}
+a.default.link {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+    display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.image-bg {
+    display: block;
+    height: 430px;
+    position: relative;
+    width: 100%;
+}
+.image-bg .image-shop-scroll {
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 430px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    transition: all 4s ease-out 0s;
+    width: 100%;
+}
+.image-bg:hover .image-shop-scroll {
+    background-position: center 100% !important;
+}

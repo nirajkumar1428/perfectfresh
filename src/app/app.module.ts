@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -26,7 +28,9 @@ import { SignupComponent } from './signup/signup.component';
     ReactiveFormsModule,
     HttpClientModule,
     appRoutingModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot(),
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

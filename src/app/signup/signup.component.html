@@ -15,25 +15,36 @@
     <div class="content-area testimonials-page row">
         <div class="medium-6 medium-offset-3 small-12 columns form-container">
             <h2>Sign up to start shopping</h2>
-            <form>
+            <form (ngSubmit)="onSubmit()" #addMilestoneForm="ngForm">
+                {{consumer | json}}
                 <label>
                     Your Username
-                    <input type="text" value="" placeholder="Enter username ..." />
+                    <input 
+                    required
+                    [(ngModel)]="consumer.name" name="name"
+                    #name="ngModel"
+                    type="text" value="" placeholder="Enter username ..." />
                 </label>
                 
                 <label>
                     Your Email address
-                    <input type="text" value="" placeholder="Your Email Address ..." />
+                    <input
+                    required
+                    [(ngModel)]="consumer.email" name="email"
+                    #email="ngModel"
+                    type="text" value="" placeholder="Your Email Address ..." />
                 </label>
                 
                 <label>
                     Chose password
-                    <input type="password" value="" placeholder="Enter password ..." />
+                    <input  required
+                    [(ngModel)]="consumer.password" name="password"
+                    #password="ngModel" type="password" value="" placeholder="Enter password ..." />
                 </label>
                 <input type="submit" value="Register" class="button primary" />
             </form>
             <div class="helping-links">
-                    <a href="login.html">Already member?</a> | <a href="login.html">Forgot password?</a>
+                    <a [routerLink]="[ '/login']">Already member?</a> | <a href="login.html">Forgot password?</a>
                 </div>
         </div><!-- columns 12 /-->
         

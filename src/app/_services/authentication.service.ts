@@ -33,6 +33,13 @@ export class AuthenticationService {
             }));
     }
 
+    signup(data: any) {
+        return this.http.post<any>(`http://3.7.60.25:8080/bloommart/userRegistration`, { payload: data})
+        .pipe(map(user => {
+                return user.userDetail;
+            }));
+    }
+
    logout() {
         console.log('ssssssssssssssssss')
         this.currentUserSubject.next(null);
